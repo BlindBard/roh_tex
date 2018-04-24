@@ -750,14 +750,12 @@ a:hover {
   margin-right: 170px; }
 
 .column .city {
-  width: 320px; }
-.column .tel {
-  width: 240px; }
-.column .mail {
-  width: 260px; }
+  width: 315px; }
+.column .tel-mail {
+  width: 255px; }
 
 .column-item li {
-  padding: 0 0 50px; }
+  padding: 0 0 25px; }
 .column-item h5 {
   text-transform: inherit;
   color: #bee5f6;
@@ -765,8 +763,13 @@ a:hover {
 .column-item p {
   font-weight: 100;
   color: #fff; }
+.column-item a {
+  color: #fff; }
 .column-item .city-name {
   color: #fff; }
+.column-item .city-name-heading {
+  color: #bee5f6;
+  padding-bottom: 30px; }
 
 .footer-bottom {
   background: #031b34;
@@ -803,26 +806,22 @@ a:hover {
   background: url(../images/webmil-ico.svg) no-repeat;
   background-position: center; }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1236px) {
   .footer-logo {
     margin-right: 100px; }
 
   .column .city {
-    width: 270px; }
-  .column .tel {
-    width: 190px; }
-  .column .mail {
-    width: 210px; } }
+    width: 250px; }
+  .column .tel-mail {
+    width: 180px; } }
 @media screen and (max-width: 950px) {
   .footer-logo {
     margin-right: 50px; }
 
   .column .city {
-    width: 230px; }
-  .column .tel {
-    width: 160px; }
-  .column .mail {
-    width: 180px; } }
+    width: 205px; }
+  .column .tel-mail {
+    width: 160px; } }
 @media screen and (max-width: 860px) {
   .copyright {
     margin-right: 60px; } }
@@ -840,9 +839,9 @@ a:hover {
     width: 100%; }
 
   .column-item li {
-    padding: 0 0 40px; }
-  .column-item li:nth-child(2) {
-    display: none; }
+    padding: 0 0 20px; }
+  .column-item .city-name-heading {
+    padding: 0; }
 
   .footer-bottom {
     padding: 15px 0; } }
@@ -897,6 +896,7 @@ a:hover {
   height: 100%; }
 
 .help-info {
+  position: relative;
   max-width: 540px; }
 
 .services-wrap {
@@ -918,11 +918,11 @@ a:hover {
   padding: 250px 0 20px; }
 
 .services-description {
-  padding-left: 40px; }
+  padding: 55px 0 0 40px; }
   .services-description__item {
     display: inline-block;
     position: relative;
-    max-width: 400px;
+    max-width: 700px;
     padding: 0 60px 0 40px;
     overflow: hidden; }
   .services-description .dot {
@@ -960,8 +960,8 @@ a:hover {
     font-weight: normal; }
   .services-description .first-paragraph {
     padding-bottom: 100px; }
-  .services-description .second-paragraph {
-    padding-bottom: 200px; }
+  .services-description li {
+    padding-bottom: 10px; }
 
 .certificates {
   padding-top: 120px; }
@@ -998,6 +998,11 @@ a:hover {
 
 .portfolio-heading {
   max-width: 290px; }
+
+.portfolio__description {
+  max-width: 525px;
+  font-weight: 600;
+  padding-top: 15px; }
 
 .portfolio-item-wrap {
   position: relative;
@@ -1043,7 +1048,7 @@ a:hover {
   background: #fafafa;
   padding: 200px 0; }
   .portfolio-description .description-info {
-    max-width: 360px; }
+    max-width: 480px; }
   .portfolio-description h5 {
     font-weight: 600;
     padding-bottom: 20px; }
@@ -1069,11 +1074,15 @@ a:hover {
         -ms-flex: 1;
             flex: 1; }
   .contacts__description {
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     font-weight: 600;
     padding-right: 200px; }
   .contacts div p:nth-child(2) {
     padding-top: 15px; }
+  .contacts a {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000; }
 
 .contacts-wrap {
   max-width: 550px;
@@ -1099,6 +1108,8 @@ a:hover {
   .address-info div p:nth-child(2) {
     padding-top: 10px; }
   .address-info div:nth-child(2) {
+    padding-bottom: 30px; }
+  .address-info div:nth-child(3) {
     padding-bottom: 30px; }
 
 .map {
@@ -1153,11 +1164,9 @@ a:hover {
     padding: 150px 0 20px; }
 
   .services-description__item {
-    display: block; }
+    display: block;
+    padding: 0 100px 0 40px; }
   .services-description .first-paragraph {
-    padding-bottom: 30px;
-    margin-bottom: 20px; }
-  .services-description .second-paragraph {
     padding-bottom: 30px;
     margin-bottom: 20px; } }
 @media screen and (max-width: 840px) {
@@ -1216,14 +1225,15 @@ a:hover {
       position: absolute;
       bottom: 0;
       right: 0;
-      background: url(../images/keys.png) no-repeat;
+      background: url(../images/crane-320.png) no-repeat;
       background-size: cover;
-      width: 220px;
-      height: 240px; }
+      width: 320px;
+      height: 210px; }
 
   .help {
     background: #f9e33d; }
     .help p {
+      max-width: 440px;
       padding-right: 0; }
     .help__heading {
       max-width: 320px; }

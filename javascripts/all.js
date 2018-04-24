@@ -1621,7 +1621,7 @@ if ( typeof define === 'function' && define.amd ) {
       }
     });
     if ($('.map').length) {
-      initMaps(document.querySelector('.map'), 48.922208, 24.711226);
+      initMaps(document.querySelector('.map'), 48.874762, 24.709879);
     }
     swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
