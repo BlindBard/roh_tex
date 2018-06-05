@@ -1430,7 +1430,7 @@ window.Modernizr = (function( window, document, undefined ) {
  * class helper functions
  * from bonzo https://github.com/ded/bonzo
  * MIT license
- * 
+ *
  * classie.has( elem, 'my-class' ) -> true/false
  * classie.add( elem, 'my-new-class' )
  * classie.remove( elem, 'my-unwanted-class' )
@@ -1512,105 +1512,6 @@ if ( typeof define === 'function' && define.amd ) {
 
 })( window );
 (function() {
-  var initMaps, mapStyles, windowWidth;
-
-  windowWidth = $(window).width();
-
-  mapStyles = [
-    {
-      'featureType': 'administrative',
-      'elementType': 'labels.text.fill',
-      'stylers': [
-        {
-          'color': '#444444'
-        }
-      ]
-    }, {
-      'featureType': 'landscape',
-      'elementType': 'all',
-      'stylers': [
-        {
-          'color': '#f2f2f2'
-        }
-      ]
-    }, {
-      'featureType': 'poi',
-      'elementType': 'all',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    }, {
-      'featureType': 'road',
-      'elementType': 'all',
-      'stylers': [
-        {
-          'saturation': -100
-        }, {
-          'lightness': 45
-        }
-      ]
-    }, {
-      'featureType': 'road.highway',
-      'elementType': 'all',
-      'stylers': [
-        {
-          'visibility': 'simplified'
-        }
-      ]
-    }, {
-      'featureType': 'road.arterial',
-      'elementType': 'labels.icon',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    }, {
-      'featureType': 'transit',
-      'elementType': 'all',
-      'stylers': [
-        {
-          'visibility': 'off'
-        }
-      ]
-    }, {
-      'featureType': 'water',
-      'elementType': 'all',
-      'stylers': [
-        {
-          'color': '#46bcec'
-        }, {
-          'visibility': 'on'
-        }
-      ]
-    }
-  ];
-
-  initMaps = function(el, mapLat, mapLng) {
-    var map, mapCenter, mapIcon, marker;
-    if (!el) {
-      return;
-    }
-    mapIcon = 'images/marker-ico.png';
-    mapCenter = {
-      lat: mapLat,
-      lng: mapLng
-    };
-    map = new google.maps.Map(el, {
-      scrollwheel: false,
-      center: mapCenter,
-      zoom: 17
-    });
-    map.set('styles', mapStyles);
-    return marker = new google.maps.Marker({
-      position: mapCenter,
-      icon: mapIcon,
-      map: map
-    });
-  };
-
   $(function() {
     var button, linkBtns, menu, swiper;
     $(window).on('scroll', function() {
@@ -1620,9 +1521,6 @@ if ( typeof define === 'function' && define.amd ) {
         return $(".main-header").removeClass('header-white');
       }
     });
-    if ($('.map').length) {
-      initMaps(document.querySelector('.map'), 48.874762, 24.709879);
-    }
     swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
       breakpoints: {
@@ -1653,11 +1551,24 @@ if ( typeof define === 'function' && define.amd ) {
         return classie.remove(button, 'open');
       });
     });
-    return button.onclick = function(e) {
+    button.onclick = function(e) {
       e.preventDefault();
       classie.toggle(this, 'open');
       return classie.toggle(menu, 'open');
     };
+    return $('.js-ico-map').on('click', function(e) {
+      var $this, city, phone, street;
+      e.preventDefault();
+      $this = $(this);
+      city = $this.data('city');
+      street = $this.data('street');
+      phone = $this.data('phone');
+      $('.js-ico-map').removeClass('active');
+      $this.addClass('active');
+      $('.address-city').html(city);
+      $('.address-street').html(street);
+      return $('.phone-field').html(phone);
+    });
   });
 
 }).call(this);
