@@ -552,7 +552,7 @@ a {
 
 @media screen and (max-width: 640px) {
   h4 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 30px; }
 
   .main-heading span {
@@ -600,10 +600,10 @@ a:hover {
   position: relative;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 16px; }
   .container.footer-container {
     max-width: 1280px;
-    padding: 0 20px; }
+    padding: 0 16px; }
   .container::after {
     content: "";
     display: table;
@@ -753,6 +753,8 @@ a:hover {
   width: 315px; }
 .column .tel-mail {
   width: 255px; }
+  .column .tel-mail p {
+    padding-bottom: 10px; }
 
 .column-item li {
   padding: 0 0 25px; }
@@ -903,9 +905,7 @@ a:hover {
   padding: 0 60px; }
 
 .services {
-  background: url(../images/services-bg.png) no-repeat;
-  background-position: top center;
-  background-size: cover; }
+  background: #fafafa; }
   .services__heading {
     color: #12d1e5; }
   .services p {
@@ -995,14 +995,27 @@ a:hover {
 
 .portfolio {
   padding: 120px 0; }
+  .portfolio .inline-block {
+    padding-right: 50px; }
+
+.our-history {
+  padding-top: 120px; }
+
+.history-heading {
+  max-width: 150px; }
 
 .portfolio-heading {
   max-width: 290px; }
 
+.history__description,
 .portfolio__description {
-  max-width: 525px;
-  font-weight: 600;
-  padding-top: 15px; }
+  font-weight: 600; }
+  .history__description p,
+  .portfolio__description p {
+    padding-top: 15px; }
+  .history__description span,
+  .portfolio__description span {
+    text-transform: uppercase; }
 
 .portfolio-item-wrap {
   position: relative;
@@ -1103,19 +1116,20 @@ a:hover {
     background: url(../images/marker-ico.png) no-repeat;
     background-size: 100% 100%; }
 
-.email-field__container {
-  margin-top: 25px; }
-  .email-field__container a {
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 300; }
-
+.email-field__container,
 .phone-field__container {
   margin-top: 25px; }
+  .email-field__container a,
+  .email-field__container b,
+  .phone-field__container a,
   .phone-field__container b {
     font-size: 16px;
-    font-weight: 700;
-    line-height: 30px; }
+    line-height: 30px;
+    font-weight: 300;
+    color: #484848; }
+  .email-field__container b,
+  .phone-field__container b {
+    font-weight: 700; }
 
 .address-street,
 .phone-field {
@@ -1226,7 +1240,14 @@ a:hover {
     padding: 50px 0; }
 
   .certificate-img {
-    text-align: center; } }
+    text-align: center; }
+
+  .portfolio .half-width {
+    width: 100%; }
+  .portfolio .inline-block {
+    padding-right: 0; }
+    .portfolio .inline-block:first-child {
+      padding-bottom: 40px; } }
 @media screen and (max-width: 768px) {
   .contacts__description {
     padding: 0 0 50px 0; }
@@ -1313,6 +1334,9 @@ a:hover {
 
   .certificates__heading {
     max-width: 200px; }
+
+  .history-heading {
+    max-width: 120px; }
 
   .portfolio-heading {
     max-width: 200px; }
