@@ -1153,12 +1153,12 @@ a:hover {
     .map-container .ico-map-pin.odesa {
       top: 75%;
       left: 48%; }
-    .map-container .ico-map-pin.ternopil {
-      top: 42%;
-      left: 18%; }
     .map-container .ico-map-pin.poltava {
       top: 29%;
       left: 65%; }
+    .map-container .ico-map-pin.kharkiv {
+      top: 22%;
+      left: 74%; }
 
 .ico-map-pin {
   display: block;
